@@ -1,0 +1,24 @@
+class Fibonacci{
+    constructor (anterior,actual,proximo){
+        this.anterior = anterior
+        this.actual = actual
+        this.proximo = proximo
+        this.array1 = []
+        this.suma = 0
+    }
+     obtenerSecuencia() {
+        while(this.actual<=4000000){
+            this.proximo = this.anterior
+            this.anterior = this.actual+this.anterior
+            this.actual=this.proximo
+            this.array1.push(this.actual)
+        }
+        for(let i=0;i<this.array1.length;i++){
+            if(this.array1[i]%2==0){
+                this.suma= this.suma+this.array1[i]
+            }
+        }
+        console.log(this.array1)
+        console.log(this.suma)
+    }
+}
